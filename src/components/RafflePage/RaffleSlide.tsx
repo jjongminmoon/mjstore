@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
-import { flex_justify } from "../Common/commonStyled";
+import nikeShoes from "@/assets/nikeShoes.png";
+import fiftyPercent from "@/assets/15percent.png";
+import sevenPercent from "@/assets/7percent.png";
+import lot from "@/assets/꽝.png";
 import RafflelSlick from "./RaffleSlick";
 
 export interface ListProps {
@@ -10,19 +13,19 @@ export interface ListProps {
 export const sliderList: ListProps[] = [
   {
     name: "나이키 덩크 로우 LX 블루 스웨이드",
-    image: "src/assets/nikeShoes.png",
+    image: nikeShoes,
   },
   {
     name: "15% 할인쿠폰",
-    image: "src/assets/15percent.png",
+    image: fiftyPercent,
   },
   {
     name: "7% 할인쿠폰",
-    image: "src/assets/7percent.png",
+    image: sevenPercent,
   },
   {
     name: "꽝",
-    image: "src/assets/꽝.png",
+    image: lot,
   },
 ];
 
