@@ -55,6 +55,7 @@ const JoinMethodWrapper = styled.div`
 
 const Wrapper = styled.div`
   ${flex_center}
+  flex-direction: column;
   gap: 20px;
   margin-top: 50px;
 `;
