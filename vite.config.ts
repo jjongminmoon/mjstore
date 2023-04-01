@@ -8,7 +8,6 @@ export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
   return defineConfig({
     plugins: [react()],
-    base: "/mjstore/",
     resolve: {
       alias: [
         {
