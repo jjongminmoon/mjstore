@@ -1,4 +1,10 @@
 import styled from "@emotion/styled";
+import pageCarousel1 from "@/assets/p-1.png";
+import pageCarousel2 from "@/assets/p-2.png";
+import pageCarousel3 from "@/assets/p-3.png";
+import pageCarousel4 from "@/assets/p-4.png";
+import pageCarousel5 from "@/assets/p-5.png";
+import pageCarousel6 from "@/assets/p-6.png";
 import PageCarouselSlick from "./PageCarouselSlick";
 
 interface ListProps {
@@ -9,27 +15,27 @@ interface ListProps {
 const sliderList: ListProps[] = [
   {
     name: "캐러셀 첫번째 이미지",
-    image: "src/assets/p-1.png",
+    image: pageCarousel1,
   },
   {
     name: "캐러셀 두번째 이미지",
-    image: "src/assets/p-2.png",
+    image: pageCarousel2,
   },
   {
     name: "캐러셀 세번째 이미지",
-    image: "src/assets/p-3.png",
+    image: pageCarousel3,
   },
   {
     name: "캐러셀 네번째 이미지",
-    image: "src/assets/p-4.png",
+    image: pageCarousel4,
   },
   {
     name: "캐러셀 다섯번째 이미지",
-    image: "src/assets/p-5.png",
+    image: pageCarousel5,
   },
   {
     name: "캐러셀 여섯번째 이미지",
-    image: "src/assets/p-6.png",
+    image: pageCarousel6,
   },
 ];
 
