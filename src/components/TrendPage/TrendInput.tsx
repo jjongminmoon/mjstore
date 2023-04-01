@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import uploadImage from "@/assets/uploadImage.png";
 import { dbService } from "@/firebase";
 import { AuthContext } from "@/store/AuthProvider";
 import { addDoc, collection } from "firebase/firestore";
@@ -86,7 +87,7 @@ export default function TrendInput({ setPopup }: TrendInputProps) {
             {image ? (
               <Image src={image} alt="사용자 업로드 이미지" />
             ) : (
-              <NoImage src={"src/assets/uploadImage.png"} />
+              <NoImage src={uploadImage} />
             )}
           </ImageWrapper>
 

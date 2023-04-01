@@ -1,4 +1,8 @@
 import styled from "@emotion/styled";
+import nikeShoes from "@/assets/nikeShoes.png";
+import fiftyPercent from "@/assets/15percent.png";
+import sevenPercent from "@/assets/7percent.png";
+import lot from "@/assets/꽝.png";
 import LoadingPage from "@/components/Common/LoadingPage";
 import RaffleSlide from "@/components/RafflePage/RaffleSlide";
 import { FixedWindow, flex_center, flex_justify } from "@/components/Common/commonStyled";
@@ -19,19 +23,19 @@ export default function RafflePage() {
     const prize: any[] = [
       {
         name: "나이키 덩크 로우 LX 블루 스웨이드",
-        image: "src/assets/nikeShoes.png",
+        image: nikeShoes,
       },
       {
         name: "15% 할인쿠폰",
-        image: "src/assets/15percent.png",
+        image: fiftyPercent,
       },
       {
         name: "7% 할인쿠폰",
-        image: "src/assets/7percent.png",
+        image: sevenPercent,
       },
       {
         name: "꽝",
-        image: "src/assets/꽝.png",
+        image: lot,
       },
     ];
     const pbt = [2, 15, 40];
