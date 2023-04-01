@@ -72,7 +72,7 @@ export default function Review() {
       <ReviewWrapper>
         <TotalStarScore>
           평균 별점: <AiFillStar color={"yellow"} />
-          {isNaN(totalStarScore) ? "아직 작성된 리뷰가 없어요!" : `${totalStarScore}.0점`}
+          {isNaN(totalStarScore) ? "아직 작성된 리뷰가 없어요!" : `${totalStarScore}점`}
         </TotalStarScore>
         {reviewData
           .filter((item: any) => item.product_id === id)
