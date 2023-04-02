@@ -111,6 +111,10 @@ const Item = styled.div`
   padding: 10px;
   border-bottom: 1px solid #e5e5e5;
   font-weight: bold;
+
+  @media (max-width: 580px) {
+    font-size: 10px;
+  }
 `;
 
 const Content = styled.div`
@@ -122,6 +126,10 @@ const Content = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  @media (max-width: 580px) {
+    font-size: 10px;
+  }
 `;
 
 const PopupButton = styled.button`
@@ -141,7 +149,7 @@ const PopupWrapper = styled.div`
 `;
 
 const PopupInput = styled.input`
-  width: 500px;
+  width: 70%;
   height: 30px;
   border: 1px solid #ccc;
   border-top-left-radius: 8px;

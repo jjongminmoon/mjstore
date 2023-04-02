@@ -54,6 +54,10 @@ const Container = styled.section`
   @media (max-width: 730px) {
     padding: 10px 20px 20px 20px;
   }
+
+  @media (max-width: 580px) {
+    font-size: 10px;
+  }
 `;
 
 const Wrapper = styled.div`

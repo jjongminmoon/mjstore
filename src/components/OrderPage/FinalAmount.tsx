@@ -68,6 +68,10 @@ const Item = styled.div`
   font-size: 16px;
   margin: 0;
   color: #999;
+
+  @media (max-width: 580px) {
+    font-size: 10px;
+  }
 `;
 
 const Price = styled.p`
@@ -89,12 +93,20 @@ const FinalItem = styled.div`
   font-weight: bold;
   color: #333;
   margin: auto 0 0 0;
+
+  @media (max-width: 580px) {
+    font-size: 13px;
+  }
 `;
 
 const FinalPrice = styled.p`
   font-size: 30px;
   margin: 0 10px 0 auto;
   color: #0083ff;
+
+  @media (max-width: 580px) {
+    font-size: 16px;
+  }
 `;
 
 const Point = styled.p`

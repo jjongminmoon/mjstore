@@ -97,6 +97,10 @@ const Exit = styled(AiOutlineClose)`
   margin-left: auto;
 
   ${hover_gray}
+
+  @media (max-width: 580px) {
+    margin: 0 auto;
+  }
 `;
 
 const UserName = styled.p`

@@ -38,6 +38,10 @@ export const CartNumber = styled.div`
   display: flex;
   justify-content: center;
   width: 5%;
+
+  @media (max-width: 580px) {
+    display: none;
+  }
 `;
 
 export const ImageNameWrapper = styled.div`
@@ -65,6 +69,10 @@ export const CartNameWrapper = styled.div`
 export const CartEnName = styled.div`
   font-size: 11px;
   color: #999;
+
+  @media (max-width: 580px) {
+    font-size: 7px;
+  }
 `;
 
 export const Size = styled.div`
@@ -83,6 +91,10 @@ export const Management = styled.div`
   display: flex;
   justify-content: center;
   width: 10%;
+
+  @media (max-width: 580px) {
+    width: 15%;
+  }
 `;
 
 export const NoItem = styled.div`

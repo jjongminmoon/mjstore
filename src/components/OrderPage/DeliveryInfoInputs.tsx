@@ -71,6 +71,10 @@ const InputWrapper = styled.div`
   padding: 30px;
   background-color: white;
   overflow-y: auto;
+
+  @media (max-width: 580px) {
+    width: 80%;
+  }
 `;
 
 const SaveButton = styled.div`

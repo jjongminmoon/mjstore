@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import DeliveryInfo from "./DeliveryInfo";
 import ProductInfo from "./ProductInfo";
+import Review from "../Review/Review";
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { clothesSizeList, shoesSizeList } from "./SizeList";
@@ -10,7 +11,6 @@ import { useContext } from "react";
 import { UserCartContext, UserDataIdContext } from "../../store/CartProvider";
 import { AuthContext } from "@/store/AuthProvider";
 import { FixedWindow, flex_align, flex_center, flex_column } from "../Common/commonStyled";
-import Review from "../Review/Review";
 
 export default function DetailContent({ item }: any) {
   const userDataId = useContext(UserDataIdContext);
@@ -167,6 +167,10 @@ const SizeSelector = styled.div`
   padding: 20px;
   border-radius: 10px;
   background-color: white;
+
+  @media (max-width: 580px) {
+    width: 80%;
+  }
 `;
 
 const Sizes = styled.button`

@@ -54,4 +54,8 @@ const Wrapper = styled.div`
   width: 100%;
   border: 1px solid #ddd;
   border-top: 0;
+
+  @media (max-width: 580px) {
+    font-size: 7px;
+  }
 `;

@@ -106,6 +106,10 @@ const Wrapper = styled.div`
   padding: 30px;
   background-color: white;
   overflow-y: auto;
+
+  @media (max-width: 580px) {
+    width: 90%;
+  }
 `;
 
 const Exit = styled(AiOutlineClose)`
@@ -164,6 +168,10 @@ const ImageWrapper = styled.div`
   width: 60%;
   height: 100%;
   border: 1px solid black;
+
+  @media (max-width: 580px) {
+    width: 100%;
+  }
 `;
 
 const Image = styled.img`
@@ -183,4 +191,8 @@ const Title = styled.input`
   background-color: #ddd;
   border-radius: 8px;
   border: 0;
+
+  @media (max-width: 580px) {
+    width: 100%;
+  }
 `;

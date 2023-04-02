@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import CartAndUser from "./CartAndUser";
 import Search from "./Search";
 import Tabs from "./Tabs";
+import SideTabs from "./SideTabs";
 import { Link } from "react-router-dom";
 import { flex_align } from "../Common/commonStyled";
 
@@ -10,6 +11,7 @@ export default function Navbar() {
     <Nav>
       <Container>
         <Wrapper>
+          <SideTabs />
           <Link to={"/"}>
             <Logo>Mout_</Logo>
           </Link>

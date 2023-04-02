@@ -85,23 +85,24 @@ const Card = styled.div`
   color: white;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+
+  @media (max-width: 580px) {
+    font-size: 12px;
+  }
 `;
 
 const Nickname = styled.p`
   ${flex_center}
   gap: 5px;
   font-size: 15px;
+
+  @media (max-width: 580px) {
+    font-size: 12px;
+  }
 `;
 
 const TimeStamp = styled.div`
   margin: 0 auto;
   font-size: 12px;
   color: #ccc;
-`;
-
-const Delete = styled.p`
-  ${flex_justify}
-  width: 30px;
-  cursor: pointer;
-  ${hover_gray}
 `;

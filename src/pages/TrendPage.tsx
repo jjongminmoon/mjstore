@@ -49,6 +49,10 @@ const Title = styled.div`
   font-style: italic;
   padding-bottom: 10px;
   border-bottom: 3px solid black;
+
+  @media (max-width: 580px) {
+    font-size: 18px;
+  }
 `;
 
 const TrendIcon = styled(FcRightUp)`

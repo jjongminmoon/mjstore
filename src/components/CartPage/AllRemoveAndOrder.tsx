@@ -48,6 +48,10 @@ const AllRemove = styled.button`
   color: white;
   font-weight: bold;
   border: 0;
+
+  @media (max-width: 580px) {
+    font-size: 15px;
+  }
 `;
 
 const Order = styled.button`
@@ -60,4 +64,8 @@ const Order = styled.button`
   font-weight: bold;
   margin-left: auto;
   border: 0;
+
+  @media (max-width: 580px) {
+    font-size: 15px;
+  }
 `;

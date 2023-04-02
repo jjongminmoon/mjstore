@@ -20,11 +20,19 @@ const Wrapper = styled.div`
   margin-top: 30px;
   border: 1px solid #ddd;
   font-size: 14px;
+
+  @media (max-width: 580px) {
+    font-size: 8px;
+  }
 `;
 
 const HeaderNumber = styled.div`
   ${flex_justify}
   width: 5%;
+
+  @media (max-width: 580px) {
+    display: none;
+  }
 `;
 
 const HeaderName = styled.div`
@@ -45,4 +53,8 @@ const HeaderPrice = styled.div`
 const HeaderManagement = styled.div`
   ${flex_justify}
   width: 10%;
+
+  @media (max-width: 580px) {
+    width: 15%;
+  }
 `;

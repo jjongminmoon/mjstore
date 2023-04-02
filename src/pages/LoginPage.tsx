@@ -106,7 +106,12 @@ const Wrapper = styled.div`
   ${flex_column}
   width: 45%;
   height: 100%;
+
+  @media (max-width: 580px) {
+    width: 100%;
+  }
 `;
+
 const Title = styled.p`
   ${flex_justify}
   font-size: 50px;

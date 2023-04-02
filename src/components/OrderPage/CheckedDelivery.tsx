@@ -61,6 +61,10 @@ const Delivery = styled.button`
     color: #0083ff;
     background-color: #eef6ff;
   }
+
+  @media (max-width: 580px) {
+    font-size: 12px;
+  }
 `;
 
 const DeliveryIcon = styled(FcShipped)`

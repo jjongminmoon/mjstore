@@ -142,6 +142,10 @@ const Wrapper = styled.div`
   background-color: white;
   overflow-y: auto;
   border-radius: 999999px;
+
+  @media (max-width: 580px) {
+    width: 80%;
+  }
 `;
 
 const ResultWrapper = styled.div`

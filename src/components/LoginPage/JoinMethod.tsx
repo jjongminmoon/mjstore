@@ -51,6 +51,10 @@ const JoinMethodWrapper = styled.div`
   height: 50%;
   padding: 40px 40px 60px;
   background-color: white;
+
+  @media (max-width: 580px) {
+    width: 80%;
+  }
 `;
 
 const Wrapper = styled.div`

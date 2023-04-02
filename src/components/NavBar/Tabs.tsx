@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { flex_center, hover_gray } from "../Common/commonStyled";
+import { flex_align, flex_center, hover_gray } from "../Common/commonStyled";
 
-const tabList = [
+export const tabList = [
   { name: "Trade", pathname: "/trade" },
   { name: "Trend", pathname: "/trend" },
   { name: "Raffle", pathname: "/raffle" },
@@ -31,7 +31,6 @@ export default function Tabs() {
 }
 
 const Container = styled.div`
-  flex: none;
   width: 100%;
 
   @media (max-width: 1020px) {
@@ -40,7 +39,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.ul`
-  display: flex;
+  ${flex_align}
   padding: 0 10px;
   mirgin: 0;
   gap: 0.5rem;
