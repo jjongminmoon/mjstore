@@ -12,6 +12,7 @@ export const hover_gray = `&:hover {background-color: #e7e5e4; border-radius: 5p
 
 export const Button = styled.button`
   position: relative;
+  ${flex_justify}
   width: 45px;
   height: 45px;
   font-size: 25px;
