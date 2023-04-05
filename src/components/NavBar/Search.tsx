@@ -18,20 +18,17 @@ export default function Search() {
     setSearchValue(e.target.value);
   };
 
-  const handleInput = () => {
-    setAutoComplete(!autoComplete);
-  };
-
-  const showDropDown = () => {
-    if (searchValue === "") {
-      setDropDownList([]);
-    } else {
-      const showList = data?.filter((item) => item.name_kr.includes(searchValue));
-      setDropDownList(showList);
-    }
-  };
-
-  useEffect(showDropDown, [searchValue]);
+  useEffect(() => {
+    const showDropDown = () => {
+      if (searchValue === "") {
+        setDropDownList([]);
+      } else {
+        const showList = data?.filter((item) => item.name_kr.includes(searchValue));
+        setDropDownList(showList);
+      }
+    };
+    showDropDown();
+  }, [searchValue]);
 
   if (isLoading) {
     <LoadingPage />;
@@ -40,7 +37,7 @@ export default function Search() {
   return (
     <>
       <Wrapper>
-        <Input placeholder="제품명 등 검색" onClick={handleInput} />
+        <Input placeholder="제품명 등 검색" onClick={() => setAutoComplete(!autoComplete)} />
       </Wrapper>
 
       {autoComplete ? (
@@ -55,7 +52,7 @@ export default function Search() {
                   placeholder="제품명 등 검색"
                 />
               </Wrapper>
-              <XIcon onClick={handleInput} />
+              <XIcon onClick={() => setAutoComplete(!autoComplete)} />
               <SearchCount>Total: {CommaFormat(Number(dropDownList?.length))}</SearchCount>
               <DropDownList>
                 {dropDownList?.map((item) => (
@@ -80,7 +77,7 @@ export default function Search() {
       ) : null}
 
       <SearchIcon>
-        <AiOutlineSearch onClick={handleInput} />
+        <AiOutlineSearch onClick={() => setAutoComplete(!autoComplete)} />
       </SearchIcon>
     </>
   );
@@ -126,6 +123,7 @@ const SearchInput = styled.input`
 `;
 
 const SearchIcon = styled.button`
+  display: none;
   width: 45px;
   height: 45px;
   font-size: 25px;
@@ -133,7 +131,6 @@ const SearchIcon = styled.button`
   border: 0;
   padding-top: 5px;
   color: #57534e;
-  display: none;
 
   ${hover_gray}
 

@@ -25,6 +25,8 @@ export default function CartList() {
   const userCart = useContext(UserCartContext);
   const userCartId = useContext(UserDataIdContext);
 
+  console.log(typeof userCart[0]);
+
   return (
     <Container>
       {userCart[0]?.length > 0 ? (

@@ -5,6 +5,7 @@ import PageNavigator from "./PageNavigator";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { AuthProvider } from "./store/AuthProvider";
 import { CartProvider } from "./store/CartProvider";
+import ScrollToUp from "./components/Common/ScrollToUp";
 
 const queryClient = new QueryClient();
 
@@ -13,6 +14,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <CartProvider>
+          <ScrollToUp />
           <MainContainer>
             <Navbar />
             <PageNavigator />
