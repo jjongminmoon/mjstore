@@ -166,8 +166,9 @@ const Input = styled.input`
 const ImageWrapper = styled.div`
   ${flex_center}
   width: 60%;
-  height: 100%;
-  border: 1px solid black;
+  height: 90%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 
   @media (max-width: 580px) {
     width: 100%;
@@ -177,6 +178,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 `;
 
 const NoImage = styled.img`
