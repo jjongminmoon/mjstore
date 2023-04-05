@@ -25,12 +25,12 @@ export default function CartAndUser() {
 
   return (
     <Wrapper>
-      <Link to={"/trade/cart"}>
-        <Button>
+      <Button>
+        <Link to={"/trade/cart"}>
           <BsHandbagFill />
           {cartCount > 0 ? <CartCount>{cartCount}</CartCount> : null}
-        </Button>
-      </Link>
+        </Link>
+      </Button>
       <Button>
         {userInfo !== null ? (
           <>
@@ -66,6 +66,10 @@ export default function CartAndUser() {
 const Wrapper = styled.div`
   display: flex;
   gap: 5px;
+`;
+
+const BsHandbagFillIcon = styled(BsHandbagFill)`
+  font-size: 35px;
 `;
 
 const BiUserIcon = styled(BiUser)`
