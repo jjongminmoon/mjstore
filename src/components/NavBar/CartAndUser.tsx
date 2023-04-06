@@ -88,7 +88,7 @@ const UserButton = styled.button`
 
 const BiUserIcon = styled(BiUser)`
   font-size: 35px;
-  margin-top: 3px;
+  margin-top: 5px;
 `;
 
 const UserMenu = styled.div`
@@ -140,7 +140,7 @@ const Item = styled.div`
 
 const BiLogInCircleIcon = styled(BiLogInCircle)`
   font-size: 35px;
-  margin-top: 2px;
+  margin-top: 5px;
 `;
 
 const CartCount = styled.div`

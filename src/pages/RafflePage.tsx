@@ -162,7 +162,7 @@ const ResultName = styled.p`
 `;
 
 const Exit = styled.button`
-  width: 20%;
+  width: 30%;
   height: 40px;
   background-color: black;
   font-size: 16px;
