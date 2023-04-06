@@ -75,6 +75,7 @@ const Wrapper = styled.div`
 const UserButton = styled.button`
   position: relative;
   ${flex_center}
+  flex-shrink: 0;
   width: 45px;
   height: 45px;
   font-size: 25px;
