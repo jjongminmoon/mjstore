@@ -74,7 +74,6 @@ const BsHandbagFillIcon = styled(BsHandbagFill)`
 
 const BiUserIcon = styled(BiUser)`
   font-size: 35px;
-  margin-bottom: 3px;
 `;
 
 const UserMenu = styled.div`
@@ -126,7 +125,6 @@ const Item = styled.div`
 
 const BiLogInCircleIcon = styled(BiLogInCircle)`
   font-size: 35px;
-  margin-top: 4px;
 `;
 
 const CartCount = styled.div`
