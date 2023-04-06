@@ -70,6 +70,7 @@ export default function CartAndUser() {
 
 const Wrapper = styled.div`
   display: flex;
+  ${flex_center}
 `;
 
 const UserButton = styled.button`
@@ -79,6 +80,7 @@ const UserButton = styled.button`
   font-size: 25px;
   background-color: transparent;
   border: 0;
+  padding: 0;
   color: #57534e;
 
   ${hover_gray}
@@ -86,7 +88,7 @@ const UserButton = styled.button`
 
 const BiUserIcon = styled(BiUser)`
   font-size: 35px;
-  margin-bottom: 4px;
+  margin-top: 3px;
 `;
 
 const UserMenu = styled.div`
