@@ -27,7 +27,7 @@ export default function CartAndUser() {
     <Wrapper>
       <Button>
         <Link to={"/trade/cart"}>
-          <BsHandbagFill />
+          <BsHandbagFillIcon />
           {cartCount > 0 ? <CartCount>{cartCount}</CartCount> : null}
         </Link>
       </Button>
@@ -69,11 +69,12 @@ const Wrapper = styled.div`
 `;
 
 const BsHandbagFillIcon = styled(BsHandbagFill)`
-  font-size: 35px;
+  font-size: 27px;
 `;
 
 const BiUserIcon = styled(BiUser)`
   font-size: 35px;
+  margin-bottom: 3px;
 `;
 
 const UserMenu = styled.div`
@@ -125,6 +126,7 @@ const Item = styled.div`
 
 const BiLogInCircleIcon = styled(BiLogInCircle)`
   font-size: 35px;
+  margin-top: 4px;
 `;
 
 const CartCount = styled.div`
