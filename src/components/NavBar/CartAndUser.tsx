@@ -65,7 +65,6 @@ export default function CartAndUser() {
 
 const Wrapper = styled.div`
   display: flex;
-  gap: 5px;
 `;
 
 const BiUserIcon = styled(BiUser)`
