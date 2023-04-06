@@ -4,7 +4,14 @@ import { BsHandbagFill } from "react-icons/bs";
 import { BiLogInCircle, BiUser } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import { box_shadow, Button, flex_column, flex_justify, hover_gray } from "../Common/commonStyled";
+import {
+  box_shadow,
+  Button,
+  flex_center,
+  flex_column,
+  flex_justify,
+  hover_gray,
+} from "../Common/commonStyled";
 import { AuthContext } from "../../store/AuthProvider";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
@@ -31,7 +38,7 @@ export default function CartAndUser() {
           {cartCount > 0 ? <CartCount>{cartCount}</CartCount> : null}
         </Link>
       </Button>
-      <Button>
+      <UserButton>
         {userInfo !== null ? (
           <BiUserIcon onClick={() => setUserMenu(!userMenu)} />
         ) : (
@@ -39,30 +46,43 @@ export default function CartAndUser() {
             <BiLogInCircleIcon />
           </Link>
         )}
-      </Button>
-      {userMenu ? (
-        <UserMenu>
-          <Menu>
-            <Exit onClick={() => setUserMenu(false)} />
-            <UserName>{userInfo?.displayName} 님</UserName>
-            <Item
-              onClick={() => {
-                navigate("/user/mypage");
-                setUserMenu(false);
-              }}
-            >
-              마이페이지
-            </Item>
-            <Item onClick={handleLogout}>로그아웃</Item>
-          </Menu>
-        </UserMenu>
-      ) : null}
+        {userMenu ? (
+          <UserMenu>
+            <Menu>
+              <Exit onClick={() => setUserMenu(false)} />
+              <UserName>{userInfo?.displayName} 님</UserName>
+              <Item
+                onClick={() => {
+                  navigate("/user/mypage");
+                  setUserMenu(false);
+                }}
+              >
+                마이페이지
+              </Item>
+              <Item onClick={handleLogout}>로그아웃</Item>
+            </Menu>
+          </UserMenu>
+        ) : null}
+      </UserButton>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: flex;
+`;
+
+const UserButton = styled.button`
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
+  background-color: transparent;
+  border: 0;
+  padding-top: 5px;
+  color: #57534e;
+
+  ${hover_gray}
 `;
 
 const BiUserIcon = styled(BiUser)`
@@ -75,7 +95,7 @@ const UserMenu = styled.div`
   padding: 10px;
   background-color: white;
   border-radius: 8px;
-  right: -33px;
+  right: 0;
   top: 50px;
   width: 200px;
   height: 150px;
