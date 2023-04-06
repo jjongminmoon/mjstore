@@ -33,32 +33,30 @@ export default function CartAndUser() {
       </Button>
       <Button>
         {userInfo !== null ? (
-          <>
-            <BiUserIcon onClick={() => setUserMenu(!userMenu)} />
-            {userMenu ? (
-              <UserMenu>
-                <Menu>
-                  <Exit onClick={() => setUserMenu(false)} />
-                  <UserName>{userInfo?.displayName} 님</UserName>
-                  <Item
-                    onClick={() => {
-                      navigate("/user/mypage");
-                      setUserMenu(false);
-                    }}
-                  >
-                    마이페이지
-                  </Item>
-                  <Item onClick={handleLogout}>로그아웃</Item>
-                </Menu>
-              </UserMenu>
-            ) : null}
-          </>
+          <BiUserIcon onClick={() => setUserMenu(!userMenu)} />
         ) : (
           <Link to={"/user/login"}>
             <BiLogInCircleIcon />
           </Link>
         )}
       </Button>
+      {userMenu ? (
+        <UserMenu>
+          <Menu>
+            <Exit onClick={() => setUserMenu(false)} />
+            <UserName>{userInfo?.displayName} 님</UserName>
+            <Item
+              onClick={() => {
+                navigate("/user/mypage");
+                setUserMenu(false);
+              }}
+            >
+              마이페이지
+            </Item>
+            <Item onClick={handleLogout}>로그아웃</Item>
+          </Menu>
+        </UserMenu>
+      ) : null}
     </Wrapper>
   );
 }
