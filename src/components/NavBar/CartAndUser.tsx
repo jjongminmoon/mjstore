@@ -74,13 +74,12 @@ const Wrapper = styled.div`
 
 const UserButton = styled.button`
   position: relative;
-  display: flex;
+  ${flex_center}
   width: 45px;
   height: 45px;
   font-size: 25px;
   background-color: transparent;
   border: 0;
-  padding-top: 5px;
   color: #57534e;
 
   ${hover_gray}
