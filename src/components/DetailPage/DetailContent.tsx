@@ -26,7 +26,13 @@ export default function DetailContent({ item }: any) {
     const sameItem = userCart[0]?.find((el: any) => el.id === cartInfo.id);
     const sameSize = userCart[0]?.find((el: any) => el.size === cartInfo.size);
 
-    if (selectedSize === "all" && (item.category === "clotehs" || item.category === "shoes")) {
+    if (userInfo === null) {
+      alert("장바구니는 회원만 이용가능합니다.");
+      return;
+    } else if (
+      selectedSize === "all" &&
+      (item.category === "clotehs" || item.category === "shoes")
+    ) {
       alert("사이즈를 선택해주세요.");
       return userCart;
     } else if (sameItem && sameSize) {
@@ -98,13 +104,7 @@ export default function DetailContent({ item }: any) {
 
           <ButtonWrapper>
             <Buy>구매</Buy>
-            <Cart
-              onClick={() =>
-                userInfo === null ? alert("장바구니는 회원만 이용 가능합니다.") : addToCart
-              }
-            >
-              장바구니
-            </Cart>
+            <Cart onClick={addToCart}>장바구니</Cart>
           </ButtonWrapper>
           <DeliveryInfo />
         </RightWrapper>

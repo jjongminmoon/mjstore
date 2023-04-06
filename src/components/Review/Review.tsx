@@ -4,7 +4,7 @@ import { AuthContext } from "@/store/AuthProvider";
 import { useContext, useEffect, useRef, useState } from "react";
 import { SiCodereview } from "react-icons/si";
 import { flex_align, flex_column, flex_justify, hover_gray } from "../Common/commonStyled";
-import { collection, onSnapshot, query } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { dbService } from "@/firebase";
 import { AiFillStar } from "react-icons/ai";
 import { useParams } from "react-router-dom";
@@ -22,7 +22,7 @@ export default function Review() {
     }, 0) / filteredProductReview.length;
 
   useEffect(() => {
-    const q = query(collection(dbService, "review"));
+    const q = query(collection(dbService, "review"), orderBy("createdAt", "desc"));
     const unsubscribe = onSnapshot(q, (qeurySnapshot) => {
       const arr = qeurySnapshot.docs.map((doc) => {
         return {
