@@ -35,7 +35,7 @@ export default function JoinPage() {
     const snapshot = await getCountFromServer(coll);
 
     if (checkedPassword === true) {
-      createUserWithEmailAndPassword(auth, email, password)
+      await createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
           alert("회원가입 완료");
           navigate("/user/login");

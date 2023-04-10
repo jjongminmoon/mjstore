@@ -36,13 +36,10 @@ export default function LoginPage() {
       });
   };
 
-  const handleGoogleLogin = () => {
-    loginGoogle().then((result) => {
-      // console.log(result);
-      const user = result.user;
+  const handleGoogleLogin = async () => {
+    await loginGoogle();
 
-      navigate("/");
-    });
+    navigate("/");
   };
 
   useEffect(() => {

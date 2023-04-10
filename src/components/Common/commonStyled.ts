@@ -30,7 +30,7 @@ export const PageContainer = styled.section`
   margin-top: 30px;
   padding: 20px 120px;
 
-  @media (max-width: 730px) {
+  @media (max-width: 760px) {
     padding: 10px 20px 20px 20px;
   }
 `;

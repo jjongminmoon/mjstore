@@ -46,7 +46,6 @@ const Container = styled.section`
 const Title = styled.div`
   ${flex_align}
   font-size: 30px;
-  font-style: italic;
   padding-bottom: 10px;
   border-bottom: 3px solid black;
 
