@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import nikeShoes from "@/assets/nikeShoes.png";
-import fiftyPercent from "@/assets/15percent.png";
-import sevenPercent from "@/assets/7percent.png";
-import lot from "@/assets/꽝.png";
+import nikeShoes from "@/assets/nikeShoes.webp";
+import fiftyPercent from "@/assets/15percent.webp";
+import sevenPercent from "@/assets/7percent.webp";
+import lot from "@/assets/꽝.webp";
 import LoadingPage from "@/components/Common/LoadingPage";
 import RaffleSlide from "@/components/RafflePage/RaffleSlide";
 import { FixedWindow, flex_center, flex_justify } from "@/components/Common/commonStyled";

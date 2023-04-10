@@ -11,24 +11,24 @@
 2. 기능
 
 - 카테고리별 상품 분류
-  <img src = "src/assets/카테고리.png" />
+  <img src = "src/assets/카테고리.webp" />
 
 - 별점 및 리뷰 작성
-  <img src = "src/assets/별점.png" />
+  <img src = "src/assets/별점.webp" />
 
 - 장바구니
-  <img src = "src/assets/장바구니.png" />
+  <img src = "src/assets/장바구니.webp" />
 
 - 로그인 페이지 : 기본 이메일 주소로 가입하거나 구글 로그인 가능
-  <img src = "src/assets/로그인및회원가입.png" />
+  <img src = "src/assets/로그인및회원가입.webp" />
 
 - 검색창 자동완성
-  <img src = "src/assets/검색창.png" />
+  <img src = "src/assets/검색창.webp" />
 
 - 회원 스타일 공유 커뮤니티
-  <img src = "src/assets/트렌드페이지.png" />
+  <img src = "src/assets/트렌드페이지.webp" />
 
 - 상품 랜덤 추첨
-  <img src = "src/assets/래플페이지.png" />
+  <img src = "src/assets/래플페이지.webp" />
 
 3. 기술 스택 : Typescript, React, Emotion, Firebase Auth, Firestore Database

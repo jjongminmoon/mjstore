@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import uploadImage from "@/assets/uploadImage.png";
+import uploadImage from "@/assets/uploadImage.webp";
 import { dbService } from "@/firebase";
 import { AuthContext } from "@/store/AuthProvider";
 import { addDoc, collection } from "firebase/firestore";

@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import pageCarousel1 from "@/assets/p-1.png";
-import pageCarousel2 from "@/assets/p-2.png";
-import pageCarousel3 from "@/assets/p-3.png";
-import pageCarousel4 from "@/assets/p-4.png";
-import pageCarousel5 from "@/assets/p-5.png";
-import pageCarousel6 from "@/assets/p-6.png";
+import pageCarousel1 from "@/assets/p-1.webp";
+import pageCarousel2 from "@/assets/p-2.webp";
+import pageCarousel3 from "@/assets/p-3.webp";
+import pageCarousel4 from "@/assets/p-4.webp";
+import pageCarousel5 from "@/assets/p-5.webp";
+import pageCarousel6 from "@/assets/p-6.webp";
 import PageCarouselSlick from "./PageCarouselSlick";
 
 interface ListProps {

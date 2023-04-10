@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import carousel1 from "@/assets/1.png";
-import carousel2 from "@/assets/2.png";
-import carousel3 from "@/assets/3.png";
-import carousel4 from "@/assets/4.png";
-import carousel5 from "@/assets/5.png";
-import carousel6 from "@/assets/6.png";
+import carousel1 from "@/assets/1.webp";
+import carousel2 from "@/assets/2.webp";
+import carousel3 from "@/assets/3.webp";
+import carousel4 from "@/assets/4.webp";
+import carousel5 from "@/assets/5.webp";
+import carousel6 from "@/assets/6.webp";
 import CarouselSlick from "./CarouselSlick";
 
 export interface ListProps {
