@@ -19,7 +19,7 @@ export default function Footer() {
             </Company>
             <CompanyInfo>
               <Info>주식회사 엠스엘디티</Info>
-              <Info>대표: O O O</Info>
+              <Info>대표: 서구보</Info>
               <Info>사업자 등록번호: 113-86-XXXXX</Info>
               <Info>통신판매업신고: 제2021-서울성동-XXXXX호</Info>
             </CompanyInfo>
