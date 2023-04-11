@@ -60,6 +60,8 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   background-color: #f5f5f5;
 `;
 

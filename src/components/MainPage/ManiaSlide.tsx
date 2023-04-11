@@ -46,6 +46,8 @@ const Items = styled.div`
 const Image = styled.img`
   ${flex_justify}
   width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   background-color: #f5f5f5;
 `;
 
