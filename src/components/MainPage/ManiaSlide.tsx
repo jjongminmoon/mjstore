@@ -11,7 +11,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function ManiaSlide() {
-  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
+  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts, {
+    staleTime: 60000,
+    cacheTime: Infinity,
+  });
   const ManiaBrandData: ProducstsProps[] | undefined = data
     ?.filter((item) => item.brand === "JORDAN")
     .concat(data.filter((item) => item.brand === "NIKE" && item.category === "shoes"));

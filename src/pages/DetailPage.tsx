@@ -6,7 +6,10 @@ import { useParams } from "react-router-dom";
 import { getProducsts, ProducstsProps } from "../components/Common/getProducsts";
 
 export default function DetailPage() {
-  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
+  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts, {
+    staleTime: 60000,
+    cacheTime: Infinity,
+  });
   const { id } = useParams();
 
   if (isLoading) {

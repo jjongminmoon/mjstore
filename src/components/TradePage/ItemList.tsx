@@ -10,7 +10,12 @@ interface Props {
 }
 
 export default function ItemList({ category }: Props) {
-  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
+  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts, {
+    staleTime: 60000,
+    cacheTime: Infinity,
+  });
+
+  console.log(data);
 
   if (isLoading) {
     return <Loading />;

@@ -11,7 +11,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function NewSlide() {
-  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
+  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts, {
+    staleTime: 60000,
+    cacheTime: Infinity,
+  });
 
   if (isLoading) {
     return <Loading />;

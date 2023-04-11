@@ -9,7 +9,10 @@ import { Link } from "react-router-dom";
 import { flex_align, flex_column, hover_gray } from "../Common/commonStyled";
 
 export default function Search() {
-  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
+  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts, {
+    staleTime: 60000,
+    cacheTime: Infinity,
+  });
   const [searchValue, setSearchValue] = useState("");
   const [dropDownList, setDropDownList] = useState<ProducstsProps[] | undefined>(data);
   const [autoComplete, setAutoComplete] = useState(false);

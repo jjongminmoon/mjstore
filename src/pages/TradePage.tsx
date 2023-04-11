@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import PageCarousel from "../components/TradePage/PageCarousel";
 import ItemList from "../components/TradePage/ItemList";
-import LoadingPage from "../components/Common/LoadingPage";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { flex_column, PageContainer } from "../components/Common/commonStyled";
 
 interface CategoryListProps {
