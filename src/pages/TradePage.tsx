@@ -19,45 +19,34 @@ const categoryList: CategoryListProps[] = [
 ];
 
 export default function TradepPage() {
-  const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState("");
   const [selected, setSelected] = useState("");
 
-  useEffect(() => {
-    setLoading(false);
-  });
-
   return (
     <>
-      {loading ? (
-        <LoadingPage />
-      ) : (
-        <>
-          <PageCarousel />
-          <PageContainer>
-            <Divider>
-              <CategoryWrapper>
-                <Title>카테고리</Title>
-                <List>
-                  {categoryList.map((list) => (
-                    <Item
-                      key={list.category}
-                      onClick={() => {
-                        setCategory(list.category);
-                        setSelected(list.category);
-                      }}
-                      color={selected === list.category ? "black" : "#c0c0c0"}
-                    >
-                      {list.name}
-                    </Item>
-                  ))}
-                </List>
-              </CategoryWrapper>
-              <ItemList category={category} />
-            </Divider>
-          </PageContainer>
-        </>
-      )}
+      <PageCarousel />
+      <PageContainer>
+        <Divider>
+          <CategoryWrapper>
+            <Title>카테고리</Title>
+            <List>
+              {categoryList.map((list) => (
+                <Item
+                  key={list.category}
+                  onClick={() => {
+                    setCategory(list.category);
+                    setSelected(list.category);
+                  }}
+                  color={selected === list.category ? "black" : "#c0c0c0"}
+                >
+                  {list.name}
+                </Item>
+              ))}
+            </List>
+          </CategoryWrapper>
+          <ItemList category={category} />
+        </Divider>
+      </PageContainer>
     </>
   );
 }

@@ -2,10 +2,10 @@ import styled from "@emotion/styled";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/NavBar/Navbar";
 import PageNavigator from "./PageNavigator";
+import ScrollToUp from "./components/Common/ScrollToUp";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { AuthProvider } from "./store/AuthProvider";
 import { CartProvider } from "./store/CartProvider";
-import ScrollToUp from "./components/Common/ScrollToUp";
 
 const queryClient = new QueryClient();
 

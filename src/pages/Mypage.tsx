@@ -1,48 +1,36 @@
 import styled from "@emotion/styled";
 import ProfileChange from "../components/User/ProfileChange";
-import LoadingPage from "../components/Common/LoadingPage";
 import { AuthContext } from "../store/AuthProvider";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { flex_align, flex_column } from "@/components/Common/commonStyled";
 
 export default function Mypage() {
   const userInfo: any | string = useContext(AuthContext);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  });
 
   return (
-    <>
-      {loading ? (
-        <LoadingPage />
-      ) : (
-        <Container>
-          <Wrapper>
-            <List>로그인 정보</List>
-            <Divider />
-            <ListWrapper>
-              <Item>
-                UID<Content>{userInfo?.uid}</Content>
-              </Item>
-              <Item>
-                이메일<Content>{userInfo?.email}</Content>
-              </Item>
-              <Item>
-                이메일 인증 여부
-                <Content>{userInfo?.emailVerified ? "인증 완료" : "미인증"}</Content>
-              </Item>
-            </ListWrapper>
-          </Wrapper>
-          <Wrapper>
-            <List>프로필 정보</List>
-            <Divider />
-            <ProfileChange />
-          </Wrapper>
-        </Container>
-      )}
-    </>
+    <Container>
+      <Wrapper>
+        <List>로그인 정보</List>
+        <Divider />
+        <ListWrapper>
+          <Item>
+            UID<Content>{userInfo?.uid}</Content>
+          </Item>
+          <Item>
+            이메일<Content>{userInfo?.email}</Content>
+          </Item>
+          <Item>
+            이메일 인증 여부
+            <Content>{userInfo?.emailVerified ? "인증 완료" : "미인증"}</Content>
+          </Item>
+        </ListWrapper>
+      </Wrapper>
+      <Wrapper>
+        <List>프로필 정보</List>
+        <Divider />
+        <ProfileChange />
+      </Wrapper>
+    </Container>
   );
 }
 

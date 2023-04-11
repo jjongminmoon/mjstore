@@ -16,6 +16,7 @@ export default function RafflePage() {
 
   useEffect(() => {
     drawRaffle();
+    setLoading(false);
   }, [draw]);
 
   const drawRaffle = () => {
@@ -50,10 +51,6 @@ export default function RafflePage() {
       setResult(prize[0]);
     }
   };
-
-  useEffect(() => {
-    setLoading(false);
-  });
 
   return (
     <>

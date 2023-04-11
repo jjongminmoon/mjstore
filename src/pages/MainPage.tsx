@@ -2,43 +2,29 @@ import styled from "@emotion/styled";
 import NewSlide from "../components/MainPage/NewSlide";
 import ManiaSlide from "../components/MainPage/ManiaSlide";
 import Carousel from "../components/MainPage/Carousel";
-import LoadingPage from "../components/Common/LoadingPage";
-import { useEffect, useState } from "react";
 import { flex_align, flex_column, PageContainer } from "../components/Common/commonStyled";
 import { MdSwipeRight } from "react-icons/md";
 
 export default function MainPage() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  });
-
   return (
     <>
-      {loading ? (
-        <LoadingPage />
-      ) : (
-        <>
-          <Carousel />
-          <PageContainer>
-            <Wrapper>
-              <TitleWrapper>
-                <h1>신규 발매</h1>
-                <SwipeIcon />
-              </TitleWrapper>
-              <NewSlide />
-            </Wrapper>
-            <Wrapper>
-              <TitleWrapper>
-                <h1>Jordan & Nike 매니아</h1>
-                <SwipeIcon />
-              </TitleWrapper>
-              <ManiaSlide />
-            </Wrapper>
-          </PageContainer>
-        </>
-      )}
+      <Carousel />
+      <PageContainer>
+        <Wrapper>
+          <TitleWrapper>
+            <h1>신규 발매</h1>
+            <SwipeIcon />
+          </TitleWrapper>
+          <NewSlide />
+        </Wrapper>
+        <Wrapper>
+          <TitleWrapper>
+            <h1>Jordan & Nike 매니아</h1>
+            <SwipeIcon />
+          </TitleWrapper>
+          <ManiaSlide />
+        </Wrapper>
+      </PageContainer>
     </>
   );
 }

@@ -44,7 +44,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   return (
     <>

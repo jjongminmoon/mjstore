@@ -12,7 +12,7 @@ export default function TrendPage() {
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   return (
     <>

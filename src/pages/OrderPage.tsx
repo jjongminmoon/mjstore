@@ -12,7 +12,7 @@ export default function OrderPage() {
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   return (
     <>

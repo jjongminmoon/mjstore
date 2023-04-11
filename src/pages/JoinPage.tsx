@@ -54,7 +54,7 @@ export default function JoinPage() {
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   return (
     <>

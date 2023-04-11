@@ -9,5 +9,3 @@ export const getToday = () => {
 
   return `${year}${month}${date} ${hours}:${minutes}:${seconds}`;
 };
-
-console.log(getToday());

@@ -9,7 +9,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const join = auth.onAuthStateChanged((fbUser) => {
-      console.log(`구독실행`, fbUser);
       setUser(fbUser);
     });
     return join;
