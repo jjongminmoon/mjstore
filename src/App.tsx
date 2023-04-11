@@ -7,7 +7,13 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { AuthProvider } from "./store/AuthProvider";
 import { CartProvider } from "./store/CartProvider";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 function App() {
   return (

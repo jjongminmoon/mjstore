@@ -11,14 +11,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function NewSlide() {
-  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts, {
-    staleTime: 60000,
-    cacheTime: Infinity,
-  });
+  const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
 
   if (isLoading) {
     return <Loading />;
   }
+
+  console.log(data);
 
   return (
     <SwiperSlick>
