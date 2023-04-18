@@ -51,6 +51,16 @@ export default function CartAndUser() {
             <Menu>
               <Exit onClick={() => setUserMenu(false)} />
               <UserName>{userInfo?.displayName} 님</UserName>
+              {userInfo?.email === "mjm7042@naver.com" ? (
+                <Item
+                  onClick={() => {
+                    navigate("/admin");
+                    setUserMenu(false);
+                  }}
+                >
+                  관리페이지
+                </Item>
+              ) : null}
               <Item
                 onClick={() => {
                   navigate("/user/mypage");
@@ -99,7 +109,7 @@ const UserMenu = styled.div`
   right: 0;
   top: 50px;
   width: 200px;
-  height: 150px;
+  height: 160px;
   z-index: 10;
   border: 1px solid #ddd;
   ${box_shadow}

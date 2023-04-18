@@ -17,8 +17,6 @@ export default function NewSlide() {
     return <Loading />;
   }
 
-  console.log(data);
-
   return (
     <SwiperSlick>
       {data

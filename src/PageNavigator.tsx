@@ -9,6 +9,7 @@ import JoinPage from "./pages/JoinPage";
 import LoginPage from "./pages/LoginPage";
 import Mypage from "./pages/Mypage";
 import RafflePage from "./pages/RafflePage";
+import AdminPage from "./pages/AdminPage";
 
 export default function PageNavigator() {
   return (
@@ -23,6 +24,7 @@ export default function PageNavigator() {
       <Route path="/user/mypage" element={<Mypage />} />
       <Route path="/trend" element={<TrendPage />} />
       <Route path="/raffle" element={<RafflePage />} />
+      <Route path="/admin" element={<AdminPage />} />
     </Routes>
   );
 }
