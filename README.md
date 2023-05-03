@@ -31,4 +31,4 @@
 - 상품 랜덤 추첨
   <img src = "src/assets/래플페이지.webp" />
 
-3. 기술 스택 : Typescript, React, Emotion, Firebase Auth, Firestore Database
+3. 기술 스택 : Typescript, React, React-Query, Emotion, Firebase Auth, Firestore Database
