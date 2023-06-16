@@ -7,28 +7,26 @@ import { useQuery } from "react-query";
 import { getProducsts, ProducstsProps } from "../Common/getProducsts";
 import { Link } from "react-router-dom";
 import { flex_align, flex_column, hover_gray } from "../Common/commonStyled";
+import useDebounce from "@/hooks/debounce";
 
 export default function Search() {
   const { data, isLoading } = useQuery<ProducstsProps[]>("products", getProducsts);
   const [searchValue, setSearchValue] = useState("");
+  const debounceValue = useDebounce(searchValue);
   const [dropDownList, setDropDownList] = useState<ProducstsProps[] | undefined>(data);
   const [autoComplete, setAutoComplete] = useState(false);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(e.target.value);
-  };
 
   useEffect(() => {
     const showDropDown = () => {
       if (searchValue === "") {
         setDropDownList([]);
       } else {
-        const showList = data?.filter((item) => item.name_kr.includes(searchValue));
+        const showList = data?.filter((item) => item.name_kr.includes(debounceValue));
         setDropDownList(showList);
       }
     };
     showDropDown();
-  }, [searchValue]);
+  }, [debounceValue]);
 
   if (isLoading) {
     <LoadingPage />;
@@ -47,7 +45,7 @@ export default function Search() {
               <Wrapper>
                 <SearchInput
                   type="text"
-                  onChange={handleChange}
+                  onChange={(e) => setSearchValue(e.target.value)}
                   value={searchValue}
                   placeholder="제품명 등 검색"
                 />
