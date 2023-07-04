@@ -15,7 +15,7 @@ export default function Footer() {
         <Wrapper>
           <HalfWrapper>
             <Company>
-              {"("}주{")"} 엠스엘디티
+              {"("}주{")"} 엠제이
             </Company>
             <CompanyInfo>
               <Info>주식회사 엠스엘디티</Info>
